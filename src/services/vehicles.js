@@ -1,5 +1,5 @@
 import { HTTPClient } from "./client";
-import {vehicle} from  './mockVehicle'
+import { vehicle } from "../mocks/mockVehicle";
 
 export default {
   /**
@@ -8,10 +8,10 @@ export default {
   getVehicles() {
     return HTTPClient.get("5eb553df31000060006994a8");
   },
-   /**
+  /**
    * Get vehicle details
    */
-  getVehicleDetails(){
+  getVehicleDetails() {
     return vehicle;
-  }
+  },
 };

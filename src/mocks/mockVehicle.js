@@ -1,3 +1,4 @@
+import { carPhotosgallery } from "../assets/Photos";
 /**
  * Needs to add another mock beyond the other, because the first one is incomplete to edit page. I utilze him in de vehicle page :)
  */
@@ -13,7 +14,7 @@ export const vehicle = {
     ano_modelo: 2014,
     versao: "S 1.6 16V FLEX 111CV 4x2 4P",
     combustivel: "Etanol/Gasolina",
-    cambio: "Mecanico",
+    cambio: "Manual",
     quilometragem: 70000,
     cor: "Prata",
   },
@@ -21,7 +22,7 @@ export const vehicle = {
   caracteristicas: ["Dono único", "Bem cuidado"],
   localizacao: {
     estado: "São Paulo",
-    Cidade: "Ribeirão Preto",
+    cidade: "Ribeirão Preto",
   },
   classificacao: "A",
   condicao: "Excelente",
@@ -29,12 +30,12 @@ export const vehicle = {
   avaliacao: {
     preco_max: 30900,
     preco_min: 30900,
-    faixa_preço_min: 65000,
-    faixa_preço_max: 69000,
-    faixa_preço_particular: 67500,
+    faixa_preco_min: 65000,
+    faixa_preco_max: 69000,
+    faixa_preco_particular: 67500,
   },
   nota_inspecao: "imagem",
-  fotos: ["imagem 1", "imagem 2"],
+  fotos: carPhotosgallery,
   contatos: [
     {
       nome: "Alfa Bravo",

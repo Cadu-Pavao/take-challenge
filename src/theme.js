@@ -9,12 +9,13 @@ export const tokens = (mode) => ({
         background: "#131417",
         contentBackground: "#1f2024",
         blueBackground: "#EAF9FF",
-        greyBackground: "#EFEFEF",
+        greyBackground: "#2a2b30",
         text: "#FFFFFF",
         textSecondary: "#f7f7f7",
         textDisabled: "#A3A3A3",
         borders: "#2a2b30",
         divider: "#2a2b30",
+        white: "#FFFFFF",
       }
     : {
         primary: "#0065FF",
@@ -28,6 +29,7 @@ export const tokens = (mode) => ({
         textDisabled: "#A3A3A3",
         borders: "#D1D1D1",
         divider: "#EFEFEF",
+        white: "#FFFFFF",
       }),
 });
 

@@ -11,6 +11,7 @@ const PageWrapper = styled.div`
 export default function Vehicles() {
   return (
     <PageWrapper>
+      <h2>Veículos</h2>
       <VehiclesList></VehiclesList>
     </PageWrapper>
   );

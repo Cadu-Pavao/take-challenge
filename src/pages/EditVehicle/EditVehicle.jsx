@@ -1,9 +1,13 @@
 import styled from "@emotion/styled";
-import vehicles from '../../services/vehicles';
+import vehicles from "../../services/vehicles";
 import { useQuery } from "react-query";
-import Data from '../../components/EditVehicles/Data'
+import Data from "../../components/EditVehicles/Data";
+import Inspect from "../../components/EditVehicles/Inspect";
+import Gallery from "../../components/EditVehicles/Gallery";
+import Contact from "../../components/EditVehicles/Contact";
+import { Grid } from "@mui/material";
 
-const fechedVehicle = async () => {
+const fetchedVehicle = async () => {
   const response = await vehicles.getVehicleDetails();
   return response;
 };
@@ -21,7 +25,7 @@ const Content = styled.div`
 `;
 
 export default function EditVehicle() {
-  const { data, status, isLoading } = useQuery("vehicle", fechedVehicle);
+  const { data, status, isLoading } = useQuery("vehicle", fetchedVehicle);
 
   return (
     <PageWrapper>
@@ -29,14 +33,20 @@ export default function EditVehicle() {
 
       <Content>
         {isLoading && <p>Loading...</p>}
-        {status === 'success' && <Data data={data}/>}
-        {/* <Section>
-          <Inspect/>
-          <Gallery/>
-          <Contact/>
-        </Section> */}
+
+        {status === "success" && (
+          <Grid container spacing={2}>
+            <Grid item xs={6}>
+              <Data data={data} />
+            </Grid>
+            <Grid item xs={6}>
+              <Inspect />
+              <Gallery photosGallery={data.fotos} />
+              <Contact contacts={data.contatos} />
+            </Grid>
+          </Grid>
+        )}
       </Content>
-      
     </PageWrapper>
   );
 }

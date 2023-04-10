@@ -16,3 +16,20 @@ body,
   display: flex;
   position: relative;
 }
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 12px;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #a3a3a3;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #666666;
+}
